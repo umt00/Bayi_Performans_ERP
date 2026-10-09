@@ -1,0 +1,12 @@
+<Project>
+  <!-- The optional StackExchange.Redis analyzer is blocked by Windows
+       Application Control on the internship machines. Removing this compiler
+       item does not remove or change the Redis runtime client. -->
+  <Target Name="RemoveBlockedStackExchangeRedisAnalyzer"
+          BeforeTargets="CoreCompile">
+    <ItemGroup>
+      <Analyzer Remove="@(Analyzer)"
+                Condition="'%(Analyzer.Filename)' == 'StackExchange.Redis.Build'" />
+    </ItemGroup>
+  </Target>
+</Project>

@@ -1,0 +1,88 @@
+[
+  {
+    "senaryo": "Risksiz Bayi",
+    "bayi_kodu": "B001",
+    "donem": "2025-05",
+    "metrikler": {
+      "gerceklesen_ciro": 2100000.00,
+      "hedef_ciro": 2000000,
+      "hedefe_ulasma_pct": 1.05,
+      "ortalama_marj_pct": 0.18,
+      "ortalama_iskonto_pct": 0.05,
+      "iade_orani_pct": 0.01,
+      "kritik_stok_urun_sayisi": 0
+    },
+    "esikler": {
+      "marj_esigi_pct": 0.15,
+      "max_iskonto_pct": 0.15,
+      "hedef_risk_esigi_pct": 0.80,
+      "stok_gun_esigi": 7,
+      "min_marj_red_pct": 0.0,
+      "iade_risk_esigi_pct": 0.10
+    },
+    "sistem_karari": {
+      "risk_skoru": 10,
+      "risk_seviyesi": "DUSUK",
+      "gerekce_kodlari": []
+    }
+  },
+  {
+    "senaryo": "Riskli Bayi",
+    "bayi_kodu": "B012",
+    "donem": "2025-05",
+    "metrikler": {
+      "gerceklesen_ciro": 1842500.40,
+      "hedef_ciro": 2000000,
+      "hedefe_ulasma_pct": 0.921,
+      "ortalama_marj_pct": 0.114,
+      "ortalama_iskonto_pct": 0.173,
+      "iade_orani_pct": 0.031,
+      "kritik_stok_urun_sayisi": 2
+    },
+    "esikler": {
+      "marj_esigi_pct": 0.15,
+      "max_iskonto_pct": 0.15,
+      "hedef_risk_esigi_pct": 0.80,
+      "stok_gun_esigi": 7,
+      "min_marj_red_pct": 0.0,
+      "iade_risk_esigi_pct": 0.10
+    },
+    "sistem_karari": {
+      "risk_skoru": 72,
+      "risk_seviyesi": "YUKSEK",
+      "gerekce_kodlari": [
+        "MARJ_EROZYONU",
+        "YUKSEK_ISKONTO"
+      ]
+    }
+  },
+  {
+    "senaryo": "Eksik Verili Bayi",
+    "bayi_kodu": "B099",
+    "donem": "2025-05",
+    "metrikler": {
+      "gerceklesen_ciro": 0,
+      "hedef_ciro": 2000000,
+      "hedefe_ulasma_pct": 0.0,
+      "ortalama_marj_pct": 0.0,
+      "ortalama_iskonto_pct": 0.0,
+      "iade_orani_pct": 0.0,
+      "kritik_stok_urun_sayisi": 0
+    },
+    "esikler": {
+      "marj_esigi_pct": 0.15,
+      "max_iskonto_pct": 0.15,
+      "hedef_risk_esigi_pct": 0.80,
+      "stok_gun_esigi": 7,
+      "min_marj_red_pct": 0.0,
+      "iade_risk_esigi_pct": 0.10
+    },
+    "sistem_karari": {
+      "risk_skoru": 50,
+      "risk_seviyesi": "ORTA",
+      "gerekce_kodlari": [
+        "VERI_EKSIGI"
+      ]
+    }
+  }
+]

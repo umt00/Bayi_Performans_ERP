@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* =========================================================================
+   KURUMSAL TEMA SİSTEMİ (Aydınlık & Karanlık Mod)
+   60-30-10 Kuralı | Doğal, Sıcak, Göz Yormayan Kurumsal Palet
+   ========================================================================= */
+
+/* AYDINLIK TEMA (Varsayılan - Pastel Krem & Keten Nötrleri) */
+:root, [data-theme="light"] {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* 60%: Zemin & Arka Plan */
+  --bg-app: #f9f8f5;
+  --bg-surface: #ffffff;
+  --bg-surface-elevated: #f3efe9;
+  --bg-surface-hover: #ece6dc;
+  --bg-input: #ffffff;
+
+  /* 30%: Çerçeveler & Tipografi */
+  --border-subtle: #e7e1d7;
+  --border-medium: #d5ccc0;
+  --border-focus: #1c3b2b;
+
+  --text-primary: #1c1917;
+  --text-secondary: #57534e;
+  --text-muted: #78716c;
+
+  /* 10%: Derin Orman Yeşili & Durum Vurguları */
+  --brand-primary: #1e3f2e;
+  --brand-primary-hover: #152d21;
+  --brand-primary-subtle: #eaf1ed;
+
+  --state-success-bg: #edf7ed;
+  --state-success-border: #c8e6c9;
+  --state-success-text: #1b4d2e;
+  --state-success-accent: #2e7d32;
+
+  --state-warning-bg: #fff8e6;
+  --state-warning-border: #fae0a7;
+  --state-warning-text: #8c5305;
+  --state-warning-accent: #b45309;
+
+  --state-danger-bg: #fdf0ee;
+  --state-danger-border: #f7cac4;
+  --state-danger-text: #8f2619;
+  --state-danger-accent: #b91c1c;
+
+  --state-info-bg: #f1f5f5;
+  --state-info-border: #d4e0e0;
+  --state-info-text: #2c4a4a;
+  --state-info-accent: #3d6363;
+
+  --shadow-sm: 0 1px 2px rgba(28, 25, 23, 0.04);
+  --shadow-md: 0 3px 8px rgba(28, 25, 23, 0.06), 0 1px 2px rgba(28, 25, 23, 0.04);
+  --shadow-card: 0 1px 3px rgba(28, 25, 23, 0.05);
+
+  --radius-sm: 5px;
+  --radius-md: 9px;
+  --radius-lg: 14px;
+}
+
+/* KARANLIK TEMA (Executive Warm Slate / Charcoal - Sıfır Neon) */
+[data-theme="dark"] {
+  /* 60%: Zemin & Arka Plan (Derin Sıcak Kömür & Antrasit) */
+  --bg-app: #10141d;
+  --bg-surface: #171d28;
+  --bg-surface-elevated: #1f2737;
+  --bg-surface-hover: #273145;
+  --bg-input: #121721;
+
+  /* 30%: Çerçeveler & Tipografi */
+  --border-subtle: #273244;
+  --border-medium: #37445c;
+  --border-focus: #4a5c7c;
+
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+
+  /* 10%: Koyu Orman Zümrütü & Doğal Mat Durum Tonları */
+  --brand-primary: #2d6a4f;
+  --brand-primary-hover: #1e4a36;
+  --brand-primary-subtle: rgba(45, 106, 79, 0.2);
+
+  --state-success-bg: #092e1e;
+  --state-success-border: #14532d;
+  --state-success-text: #86efac;
+  --state-success-accent: #22c55e;
+
+  --state-warning-bg: #2e1805;
+  --state-warning-border: #78350f;
+  --state-warning-text: #fde68a;
+  --state-warning-accent: #f59e0b;
+
+  --state-danger-bg: #300c0c;
+  --state-danger-border: #7f1d1d;
+  --state-danger-text: #fecaca;
+  --state-danger-accent: #ef4444;
+
+  --state-info-bg: #0c2333;
+  --state-info-border: #075985;
+  --state-info-text: #bae6fd;
+  --state-info-accent: #38bdf8;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.4);
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  line-height: 1.55;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-app);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-medium);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Tipografi Hiyerarşisi */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 1.45rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+button {
+  font-family: var(--font-sans);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: 0.875rem;
+  transition: all 0.15s ease;
+}
+
+input, select, textarea {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  outline: none;
+  color: var(--text-primary);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(3px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.15s ease-out forwards;
+}

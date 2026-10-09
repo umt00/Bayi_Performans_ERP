@@ -1,0 +1,11 @@
+**/bin/
+**/obj/
+**/TestResults/
+**/.vs/
+UI/node_modules/
+UI/dist/
+*.user
+*.suo
+*.log
+secrets.json
+appsettings.Local.json

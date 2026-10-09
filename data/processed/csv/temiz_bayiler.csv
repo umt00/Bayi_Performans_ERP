@@ -1,0 +1,201 @@
+BayiKodu,BayiAdi,Sehir,Bolge,Segment
+B0001,Zirve Elektronik A.ş.,Kayseri,İç Anadolu,Kurumsal
+B0002,Vizyon Ofis Sistemleri A.ş.,Antalya,Akdeniz,KOBİ
+B0003,Merkez Dijital Ltd. Şti.,Diyarbakır,Güneydoğu Anadolu,KOBİ
+B0004,Prime Network,Diyarbakır,Güneydoğu Anadolu,Bilinmiyor
+B0005,Uzman Sistem Ltd. Şti.,İstanbul,Marmara,KOBİ
+B0006,Uzman Bilgi Teknolojileri Ticaret,Mersin,Akdeniz,Bireysel
+B0007,Prime It Çözümleri Ltd. Şti.,Mersin,Akdeniz,Bireysel
+B0008,Güven Bilgisayar Ltd. Şti.,Trabzon,Karadeniz,Bireysel
+B0009,Zirve Teknoloji A.ş.,Konya,İç Anadolu,Kurumsal
+B0010,Net Teknoloji A.ş.,İzmir,Ege,Bireysel
+B0011,Elit Network,Kayseri,İç Anadolu,Bireysel
+B0012,Net It Çözümleri,Mersin,Akdeniz,KOBİ
+B0013,Alfa Bilgisayar Ticaret,İstanbul,Marmara,KOBİ
+B0014,Alfa Sistem San. Tic.,Kocaeli,Marmara,Kurumsal
+B0015,Global Teknoloji A.ş.,Kocaeli,Marmara,Bireysel
+B0016,Delta Bilgisayar A.ş.,İstanbul,Marmara,Bireysel
+B0017,Barış Bilgisayar A.ş.,Ankara,İç Anadolu,KOBİ
+B0018,Uzman Elektronik A.ş.,İstanbul,Marmara,Bireysel
+B0019,Star Elektronik Ltd. Şti.,Kocaeli,Marmara,KOBİ
+B0020,Delta Bilişim A.ş.,Adana,Akdeniz,Bilinmiyor
+B0021,Net Teknoloji Ticaret,Antalya,Akdeniz,KOBİ
+B0022,Vizyon Bilgisayar,İzmir,Ege,Kurumsal
+B0023,Merkez It Çözümleri Ltd. Şti.,Antalya,Akdeniz,Kurumsal
+B0024,Net It Çözümleri Ticaret,Eskişehir,İç Anadolu,Kurumsal
+B0025,Anadolu Teknoloji A.ş.,Adana,Akdeniz,KOBİ
+B0026,Güven Sistem San. Tic.,Eskişehir,İç Anadolu,KOBİ
+B0027,Net Sistem A.ş.,Kocaeli,Marmara,KOBİ
+B0028,Delta It Çözümleri Ticaret,Eskişehir,İç Anadolu,KOBİ
+B0029,Delta Ofis Sistemleri San. Tic.,Eskişehir,İç Anadolu,Kurumsal
+B0030,Pro Teknoloji Ltd. Şti.,Kocaeli,Marmara,Bilinmiyor
+B0031,Anadolu Sistem Ltd. Şti.,Diyarbakır,Güneydoğu Anadolu,Bireysel
+B0032,Net Network San. Tic.,Kayseri,İç Anadolu,Bireysel
+B0033,Mega Ofis Sistemleri,Samsun,Karadeniz,KOBİ
+B0034,Trend Elektronik Ticaret,Antalya,Akdeniz,Kurumsal
+B0035,Elit Dijital Ltd. Şti.,Samsun,Karadeniz,KOBİ
+B0036,Elit Bilgi Teknolojileri,Samsun,Karadeniz,Bireysel
+B0037,Uzman Bilişim A.ş.,Adana,Akdeniz,KOBİ
+B0038,Delta Dijital Ltd. Şti.,Trabzon,Karadeniz,Kurumsal
+B0039,Nova Teknoloji A.ş.,Mersin,Akdeniz,Bireysel
+B0040,Vizyon Bilgisayar Ticaret,Kocaeli,Marmara,KOBİ
+B0041,Merkez Dijital,Kayseri,İç Anadolu,Bilinmiyor
+B0042,Ege Bilgi Teknolojileri Ltd. Şti.,Bursa,Marmara,Bilinmiyor
+B0043,Zirve It Çözümleri,Mersin,Akdeniz,KOBİ
+B0044,Vizyon Teknoloji San. Tic.,Diyarbakır,Güneydoğu Anadolu,KOBİ
+B0045,Barış It Çözümleri,Mersin,Akdeniz,Bireysel
+B0046,Güven Bilişim Ltd. Şti.,Eskişehir,İç Anadolu,Kurumsal
+B0047,Anadolu Ofis Sistemleri San. Tic.,Diyarbakır,Güneydoğu Anadolu,KOBİ
+B0048,Zirve Elektronik A.ş.,Gaziantep,Güneydoğu Anadolu,KOBİ
+B0049,Elit Dijital Ltd. Şti.,Antalya,Akdeniz,KOBİ
+B0050,Star It Çözümleri Ltd. Şti.,Eskişehir,İç Anadolu,KOBİ
+B0051,Zirve Ofis Sistemleri Ltd. Şti.,Eskişehir,İç Anadolu,Bilinmiyor
+B0052,Güven It Çözümleri San. Tic.,Bursa,Marmara,Kurumsal
+B0053,Zirve Bilgi Teknolojileri Ticaret,Ankara,İç Anadolu,Bilinmiyor
+B0054,Delta Bilgisayar San. Tic.,Gaziantep,Güneydoğu Anadolu,Bilinmiyor
+B0055,Vizyon Bilgisayar San. Tic.,Antalya,Akdeniz,KOBİ
+B0056,Net Elektronik San. Tic.,Ankara,İç Anadolu,Kurumsal
+B0057,Pro Elektronik Ticaret,Diyarbakır,Güneydoğu Anadolu,KOBİ
+B0058,Barış Bilgi Teknolojileri San. Tic.,İzmir,Ege,Bireysel
+B0059,Teknik It Çözümleri San. Tic.,Kocaeli,Marmara,KOBİ
+B0060,Pro Ofis Sistemleri Ticaret,Antalya,Akdeniz,Bilinmiyor
+B0061,Merkez Teknoloji Ltd. Şti.,Samsun,Karadeniz,Bireysel
+B0062,Barış Sistem Ltd. Şti.,İzmir,Ege,KOBİ
+B0063,Trend Dijital,Mersin,Akdeniz,KOBİ
+B0064,Net Dijital Ltd. Şti.,İzmir,Ege,Bireysel
+B0065,Global It Çözümleri,Ankara,İç Anadolu,Bireysel
+B0066,Merkez Network Ticaret,Kayseri,İç Anadolu,KOBİ
+B0067,Delta Teknoloji San. Tic.,Diyarbakır,Güneydoğu Anadolu,Kurumsal
+B0068,Uzman Bilgi Teknolojileri A.ş.,Konya,İç Anadolu,Bilinmiyor
+B0069,Alfa Ofis Sistemleri Ticaret,Bursa,Marmara,Kurumsal
+B0070,Elit Network San. Tic.,Konya,İç Anadolu,Kurumsal
+B0071,Vizyon Teknoloji Ticaret,Mersin,Akdeniz,Bireysel
+B0072,Ege Bilgisayar San. Tic.,Konya,İç Anadolu,KOBİ
+B0073,Pro Ofis Sistemleri Ltd. Şti.,Bursa,Marmara,Bireysel
+B0074,Delta Bilgi Teknolojileri A.ş.,Mersin,Akdeniz,Bireysel
+B0075,Güven Elektronik Ticaret,Bursa,Marmara,Kurumsal
+B0076,Güven Ofis Sistemleri Ticaret,İzmir,Ege,Kurumsal
+B0077,Teknik Bilgisayar San. Tic.,Diyarbakır,Güneydoğu Anadolu,Bireysel
+B0078,Merkez Network,İzmir,Ege,Bireysel
+B0079,Trend Bilgi Teknolojileri A.ş.,Samsun,Karadeniz,Bilinmiyor
+B0080,Alfa Sistem Ltd. Şti.,Samsun,Karadeniz,Bireysel
+B0081,Pro Elektronik San. Tic.,Konya,İç Anadolu,KOBİ
+B0082,Zirve Teknoloji A.ş.,Samsun,Karadeniz,KOBİ
+B0083,Mega Network,Eskişehir,İç Anadolu,KOBİ
+B0084,Prime Bilişim San. Tic.,Kayseri,İç Anadolu,Kurumsal
+B0085,Anadolu Elektronik Ltd. Şti.,Kayseri,İç Anadolu,KOBİ
+B0086,Anadolu It Çözümleri Ticaret,Gaziantep,Güneydoğu Anadolu,Bilinmiyor
+B0087,Uzman Bilgisayar A.ş.,İstanbul,Marmara,Bireysel
+B0088,Zirve Teknoloji San. Tic.,Antalya,Akdeniz,Kurumsal
+B0089,Zirve Bilgi Teknolojileri Ticaret,Ankara,İç Anadolu,Kurumsal
+B0090,Elit Bilişim,Adana,Akdeniz,Bireysel
+B0091,Zirve Bilişim,Konya,İç Anadolu,KOBİ
+B0092,Pro Sistem San. Tic.,Bursa,Marmara,Kurumsal
+B0093,Teknik Bilişim Ticaret,Eskişehir,İç Anadolu,KOBİ
+B0094,Pro Dijital A.ş.,Kayseri,İç Anadolu,Bireysel
+B0095,Barış Dijital A.ş.,Diyarbakır,Güneydoğu Anadolu,Kurumsal
+B0096,Ege It Çözümleri Ticaret,Samsun,Karadeniz,Bireysel
+B0097,Global Bilişim San. Tic.,Kocaeli,Marmara,Bilinmiyor
+B0098,Mega Dijital San. Tic.,Trabzon,Karadeniz,Bireysel
+B0099,Uzman Bilişim A.ş.,İzmir,Ege,KOBİ
+B0100,Delta Ofis Sistemleri Ltd. Şti.,Samsun,Karadeniz,KOBİ
+B0101,Global Network San. Tic.,Gaziantep,Güneydoğu Anadolu,Kurumsal
+B0102,Vizyon Ofis Sistemleri Ltd. Şti.,Kayseri,İç Anadolu,Bireysel
+B0103,Ege Sistem San. Tic.,Adana,Akdeniz,KOBİ
+B0104,Merkez Ofis Sistemleri Ticaret,Mersin,Akdeniz,Bireysel
+B0105,Global Dijital Ticaret,Gaziantep,Güneydoğu Anadolu,Kurumsal
+B0106,Zirve Ofis Sistemleri Ltd. Şti.,Adana,Akdeniz,Kurumsal
+B0107,Vizyon Elektronik Ltd. Şti.,Kayseri,İç Anadolu,Kurumsal
+B0108,Global Bilişim A.ş.,Diyarbakır,Güneydoğu Anadolu,Kurumsal
+B0109,Alfa Network,Kayseri,İç Anadolu,Kurumsal
+B0110,Alfa Dijital Ticaret,İzmir,Ege,Kurumsal
+B0111,Nova Dijital San. Tic.,Kayseri,İç Anadolu,Kurumsal
+B0112,Ege It Çözümleri,Gaziantep,Güneydoğu Anadolu,KOBİ
+B0113,Uzman It Çözümleri A.ş.,Konya,İç Anadolu,Bireysel
+B0114,Net Elektronik Ltd. Şti.,Ankara,İç Anadolu,KOBİ
+B0115,Delta Dijital Ltd. Şti.,Kocaeli,Marmara,Bireysel
+B0116,Ege Elektronik San. Tic.,Samsun,Karadeniz,Bireysel
+B0117,Anadolu Bilgisayar Ticaret,Diyarbakır,Güneydoğu Anadolu,Kurumsal
+B0118,Global Sistem A.ş.,Kayseri,İç Anadolu,Bireysel
+B0119,Nova It Çözümleri,Konya,İç Anadolu,KOBİ
+B0120,Anadolu Dijital Ltd. Şti.,Kocaeli,Marmara,KOBİ
+B0121,Elit Bilgi Teknolojileri A.ş.,Bursa,Marmara,Kurumsal
+B0122,Net Sistem A.ş.,Samsun,Karadeniz,KOBİ
+B0123,Prime Dijital,Trabzon,Karadeniz,KOBİ
+B0124,Elit Ofis Sistemleri A.ş.,Ankara,İç Anadolu,Bireysel
+B0125,Vizyon Elektronik,Kocaeli,Marmara,Bireysel
+B0126,Barış Bilişim Ltd. Şti.,Samsun,Karadeniz,Bilinmiyor
+B0127,Barış Ofis Sistemleri A.ş.,Diyarbakır,Güneydoğu Anadolu,Bireysel
+B0128,Teknik Sistem San. Tic.,İstanbul,Marmara,Bireysel
+B0129,Nova Ofis Sistemleri Ticaret,Ankara,İç Anadolu,Kurumsal
+B0130,Zirve It Çözümleri Ticaret,İzmir,Ege,Kurumsal
+B0131,Delta Dijital Ticaret,Kayseri,İç Anadolu,Kurumsal
+B0132,Net Dijital A.ş.,Antalya,Akdeniz,KOBİ
+B0133,Anadolu Teknoloji Ltd. Şti.,Ankara,İç Anadolu,KOBİ
+B0134,Prime Elektronik San. Tic.,Eskişehir,İç Anadolu,Bireysel
+B0135,Ege It Çözümleri,Diyarbakır,Güneydoğu Anadolu,KOBİ
+B0136,Star Teknoloji Ticaret,İzmir,Ege,Bireysel
+B0137,Barış Dijital Ltd. Şti.,Ankara,İç Anadolu,Kurumsal
+B0138,Teknik Ofis Sistemleri,Trabzon,Karadeniz,Kurumsal
+B0139,Uzman Dijital Ticaret,Bursa,Marmara,Bilinmiyor
+B0140,Elit Bilgisayar San. Tic.,Adana,Akdeniz,Bireysel
+B0141,Global Sistem San. Tic.,Antalya,Akdeniz,Bireysel
+B0142,Net Network San. Tic.,Bursa,Marmara,KOBİ
+B0143,Anadolu Bilgisayar,Diyarbakır,Güneydoğu Anadolu,Bireysel
+B0144,Mega Elektronik San. Tic.,İstanbul,Marmara,KOBİ
+B0145,Vizyon Elektronik San. Tic.,Adana,Akdeniz,Bireysel
+B0146,Merkez Bilgi Teknolojileri San. Tic.,Adana,Akdeniz,Bireysel
+B0147,Barış Ofis Sistemleri Ticaret,Gaziantep,Güneydoğu Anadolu,Kurumsal
+B0148,Barış Ofis Sistemleri Ltd. Şti.,Eskişehir,İç Anadolu,Bireysel
+B0149,Barış Bilgi Teknolojileri A.ş.,Diyarbakır,Güneydoğu Anadolu,Bilinmiyor
+B0150,Vizyon Bilgi Teknolojileri Ticaret,Bursa,Marmara,Kurumsal
+B0151,Barış Teknoloji A.ş.,İstanbul,Marmara,Kurumsal
+B0152,Zirve Bilgisayar Ticaret,Bursa,Marmara,Bireysel
+B0153,Mega Elektronik,Samsun,Karadeniz,Kurumsal
+B0154,Vizyon Network San. Tic.,İzmir,Ege,Kurumsal
+B0155,Elit Dijital San. Tic.,Kayseri,İç Anadolu,Bireysel
+B0156,Elit Ofis Sistemleri A.ş.,Konya,İç Anadolu,KOBİ
+B0157,Teknik Dijital Ticaret,Ankara,İç Anadolu,KOBİ
+B0158,Net Bilgi Teknolojileri,Konya,İç Anadolu,KOBİ
+B0159,Alfa Elektronik San. Tic.,Samsun,Karadeniz,Kurumsal
+B0160,Alfa It Çözümleri San. Tic.,Kocaeli,Marmara,Bireysel
+B0161,Elit Ofis Sistemleri,Samsun,Karadeniz,Bireysel
+B0162,Barış Bilgisayar A.ş.,Adana,Akdeniz,Kurumsal
+B0163,Prime Bilişim Ltd. Şti.,Mersin,Akdeniz,KOBİ
+B0164,Anadolu Bilişim,Kocaeli,Marmara,Kurumsal
+B0165,Trend Ofis Sistemleri San. Tic.,İzmir,Ege,KOBİ
+B0166,Barış Bilgisayar,Mersin,Akdeniz,Bireysel
+B0167,Ege Network A.ş.,Trabzon,Karadeniz,Kurumsal
+B0168,Teknik Elektronik San. Tic.,Diyarbakır,Güneydoğu Anadolu,Bilinmiyor
+B0169,Net Dijital San. Tic.,Adana,Akdeniz,KOBİ
+B0170,Anadolu Sistem Ticaret,Trabzon,Karadeniz,KOBİ
+B0171,Ege It Çözümleri San. Tic.,Kayseri,İç Anadolu,Bireysel
+B0172,Merkez Bilgi Teknolojileri A.ş.,Kayseri,İç Anadolu,Kurumsal
+B0173,Nova Network,Trabzon,Karadeniz,Bilinmiyor
+B0174,Ege Elektronik Ticaret,Kocaeli,Marmara,KOBİ
+B0175,Nova Bilgisayar Ticaret,Konya,İç Anadolu,KOBİ
+B0176,Barış Bilişim San. Tic.,Adana,Akdeniz,Bireysel
+B0177,Net It Çözümleri San. Tic.,İstanbul,Marmara,Kurumsal
+B0178,Merkez Teknoloji San. Tic.,Trabzon,Karadeniz,KOBİ
+B0179,Teknik Elektronik Ticaret,Bursa,Marmara,Bireysel
+B0180,Elit It Çözümleri,Eskişehir,İç Anadolu,Bireysel
+B0181,Güven Teknoloji,Mersin,Akdeniz,KOBİ
+B0182,Barış Teknoloji Ltd. Şti.,Kocaeli,Marmara,Bireysel
+B0183,Elit Elektronik A.ş.,Adana,Akdeniz,KOBİ
+B0184,Trend Bilgi Teknolojileri Ticaret,Kocaeli,Marmara,Kurumsal
+B0185,Mega It Çözümleri A.ş.,Diyarbakır,Güneydoğu Anadolu,Bireysel
+B0186,Elit It Çözümleri San. Tic.,İstanbul,Marmara,Bilinmiyor
+B0187,Star Bilgisayar,Samsun,Karadeniz,Bilinmiyor
+B0188,Pro Sistem Ltd. Şti.,Gaziantep,Güneydoğu Anadolu,Kurumsal
+B0189,Merkez Network A.ş.,İstanbul,Marmara,Kurumsal
+B0190,Zirve Dijital Ticaret,Mersin,Akdeniz,KOBİ
+B0191,Pro Sistem A.ş.,Eskişehir,İç Anadolu,Bireysel
+B0192,Elit Network,Bursa,Marmara,Kurumsal
+B0193,Star Bilişim San. Tic.,Samsun,Karadeniz,KOBİ
+B0194,Elit Network A.ş.,Eskişehir,İç Anadolu,Kurumsal
+B0195,Trend Teknoloji Ltd. Şti.,Konya,İç Anadolu,Bireysel
+B0196,Trend Teknoloji Ltd. Şti.,Ankara,İç Anadolu,Bilinmiyor
+B0197,Mega Bilgisayar Ltd. Şti.,Mersin,Akdeniz,KOBİ
+B0198,Mega Elektronik,Diyarbakır,Güneydoğu Anadolu,KOBİ
+B0199,Delta Bilgi Teknolojileri,Adana,Akdeniz,Bireysel
+B0200,Anadolu Sistem A.ş.,Konya,İç Anadolu,KOBİ

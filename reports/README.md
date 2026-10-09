@@ -1,0 +1,1 @@
+# Örnek aylık rapor çıktısı

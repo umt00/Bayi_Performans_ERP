@@ -1,0 +1,58 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+
+		<IsPackable>false</IsPackable>
+		<IsTestProject>true</IsTestProject>
+	</PropertyGroup>
+
+	<ItemGroup>
+
+		<!-- xUnit test framework -->
+		<PackageReference Include="xunit" Version="2.5.3" />
+
+		<!-- .NET test altyapısı -->
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+
+		<!-- Visual Studio xUnit test adapter -->
+		<PackageReference Include="xunit.runner.visualstudio" Version="2.5.3" />
+
+		<!-- Code coverage -->
+		<PackageReference Include="coverlet.collector" Version="6.0.0" />
+
+		<!-- IConfiguration / ConfigurationBuilder -->
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+
+		<!-- IServiceCollection / ServiceProvider -->
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.1" />
+
+	</ItemGroup>
+
+	<ItemGroup>
+		<!-- Business katmanı -->
+		<ProjectReference Include="..\BayiPerformansAppWeb.Business\BayiPerformansAppWeb.Business.csproj" />
+
+		<!-- DataAccess katmanı -->
+		<ProjectReference Include="..\BayiPerformansAppWeb.DataAccess\BayiPerformansAppWeb.DataAccess.csproj" />
+
+		<!-- Entities katmanı -->
+		<ProjectReference Include="..\BayiPerformansAppWeb.Entities\BayiPerformansAppWeb.Entities.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="xunit.runner.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+
+		<!-- xUnit using -->
+		<Using Include="Xunit" />
+
+	</ItemGroup>
+
+</Project>

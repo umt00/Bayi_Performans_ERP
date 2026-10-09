@@ -1,0 +1,133 @@
+UrunKodu,UrunAdi,Kategori,AltKategori,Marka,BirimMaliyet
+U1001,Msi Probook İ5 8gb,Bilgisayar,Masaüstü Pc,MSI,27400.0
+U1002,Acer Probook Ryzen 5 16gb,Bilgisayar,Dizüstü Bilgisayar,Acer,13800.0
+U1003,Acer Latitude Ryzen 5 16gb,Bilgisayar,Laptop,Acer,52100.0
+U1004,Lenovo Latitude Ultra 7 16gb,Bilgisayar,Laptop,Lenovo,51100.0
+U1005,Lenovo Probook İ5 8gb,Bilgisayar,Dizüstü Bilgisayar,Lenovo,17400.0
+U1006,Msi Aspire Ryzen 5 16gb,Bilgisayar,Dizüstü,MSI,66500.0
+U1007,Acer Elitedesk Ryzen 5 16gb,Bilgisayar,Laptop,Acer,51450.0
+U1008,Lenovo Probook Ultra 7 16gb,Bilgisayar,Laptop,Lenovo,60500.0
+U1009,Hp Elitedesk İ7 32gb,Bilgisayar,Laptop,HP,51275.0
+U1010,Msi Thinkpad Ryzen 5 16gb,Bilgisayar,Masaüstü Pc,MSI,25700.0
+U1011,Msi Legion Ryzen 5 16gb,Bilgisayar,Laptop,MSI,50350.0
+U1012,Dell Elitedesk İ3 8gb,Bilgisayar,Notebook,Dell,15700.0
+U1013,Hp Pavilion İ3 8gb,Bilgisayar,Dizüstü Bilgisayar,HP,61550.0
+U1014,Hp Vivobook Ryzen 7 32gb,Bilgisayar,Masaüstü,HP,42200.0
+U1015,Lenovo Vivobook İ7 16gb,Bilgisayar,Masaüstü,Lenovo,39650.0
+U1016,Dell Ideacentre İ3 8gb,Bilgisayar,Masaüstü,Dell,67800.0
+U1017,Dell Pavilion Ryzen 7 32gb,Bilgisayar,Dizüstü,Dell,50200.0
+U1018,Msi Elitedesk İ5 8gb,Bilgisayar,Notebook,MSI,36350.0
+U1019,Lenovo Modern Ultra 7 16gb,Bilgisayar,Laptop,Lenovo,40450.0
+U1020,Acer Vostro İ7 16gb,Bilgisayar,Laptop,Acer,32950.0
+U1021,Dell Vostro İ7 32gb,Bilgisayar,Dizüstü Bilgisayar,Dell,13100.0
+U1022,Lenovo Vivobook İ5 8gb,Bilgisayar,Laptop,Lenovo,61150.0
+U1023,Anker Odyssey Full Hd,Çevre Birimi,Klavye,Anker,1300.0
+U1024,Apc Mk Full Hd,Çevre Birimi,Mouse,APC,6450.0
+U1025,Aoc Back-ups 27 Inç,Çevre Birimi,Mouse,AOC,2150.0
+U1026,Logitech Ultrasharp 27 İnç,Çevre Birimi,Monitör,Logitech,4375.0
+U1027,Logitech Mx 7in1,Çevre Birimi,Mouse,Logitech,4950.0
+U1028,Logitech Back-ups 650va,Çevre Birimi,Mouse,Logitech,1000.0
+U1029,Dell Odyssey 24 İnç,Çevre Birimi,Kulaklık,Dell,6600.0
+U1030,Logitech Mk Full Hd,Çevre Birimi,Ups,Logitech,1400.0
+U1031,Samsung Back-ups Full Hd,Çevre Birimi,Monitor,Samsung,650.0
+U1032,Logitech Ultragear 650va,Çevre Birimi,Ups,Logitech,4450.0
+U1033,Dell Ecotank Usb,Çevre Birimi,Ups,Dell,2700.0
+U1034,Anker Ultragear Kablosuz,Çevre Birimi,Klavye Mouse Set,Anker,8150.0
+U1035,Hp Ultrasharp 24 İnç,Çevre Birimi,Ups,HP,4600.0
+U1036,Aoc Odyssey 32 İnç,Çevre Birimi,Monitor,AOC,5450.0
+U1037,Samsung Comfort Kablosuz,Çevre Birimi,Monitör,Samsung,5650.0
+U1038,Microsoft Mk Hd 1080p,Çevre Birimi,Mouse,Microsoft,2500.0
+U1039,Samsung Ultrasharp 7in1,Çevre Birimi,Monitor,Samsung,850.0
+U1040,Hp Odyssey Kablosuz,Çevre Birimi,Webcam,HP,2700.0
+U1041,Aoc Ultrasharp Full Hd,Çevre Birimi,Klavye Mouse Set,AOC,8400.0
+U1042,Samsung Hub 32 İnç,Çevre Birimi,Klavye Mouse Set,Samsung,2650.0
+U1043,Microsoft Hub 7in1,Çevre Birimi,Klavye Mouse Set,Microsoft,8150.0
+U1044,Apc Mx 24 İnç,Çevre Birimi,Monitör,APC,3100.0
+U1045,Ubiquiti Nova Poe,Ağ,Modem,Ubiquiti,6950.0
+U1046,Mikrotik Nova 8 Port,Ağ,Access Point,Mikrotik,7200.0
+U1047,Cisco Catalyst Dual Band,Ağ,Router,Cisco,10850.0
+U1048,Tp-link Catalyst Dual Band,Ağ,Modem,TP-Link,11700.0
+U1049,Mikrotik Edgerouter Dual Band,Ağ,Switch,Mikrotik,10650.0
+U1050,Ubiquiti Edgerouter Poe,Ağ,Switch,Ubiquiti,3550.0
+U1051,Tp-link Edgerouter Ax1800,Ağ,Switch,TP-Link,2800.0
+U1052,Mikrotik Hex 8 Port,Ağ,Switch,Mikrotik,5100.0
+U1053,Cisco Catalyst Poe,Ağ,Modem,Cisco,7250.0
+U1054,Cisco Hex Gigabit,Ağ,Access Point,Cisco,950.0
+U1055,Ubiquiti Nova Gigabit,Ağ,Router,Ubiquiti,4950.0
+U1056,Netgear Unifi 8 Port,Ağ,Switch,Netgear,4700.0
+U1057,Cisco Prosafe Dual Band,Ağ,Router,Cisco,8800.0
+U1058,Ubiquiti Prosafe 24 Port,Ağ,Switch,Ubiquiti,2700.0
+U1059,Mikrotik Nova Gigabit,Ağ,Access Point,Mikrotik,5150.0
+U1060,Tenda Nova Poe,Ağ,Access Point,Tenda,5850.0
+U1061,Ubiquiti Edgerouter Dual Band,Ağ,Switch,Ubiquiti,8100.0
+U1062,Tp-link Edgerouter Dual Band,Ağ,Switch,TP-Link,8250.0
+U1063,Tp-link Archer 16 Port,Ağ,Modem,TP-Link,7550.0
+U1064,Tenda Hex Poe,Ağ,Modem,Tenda,7250.0
+U1065,Mikrotik Edgerouter Poe,Ağ,Modem,Mikrotik,1100.0
+U1066,Ubiquiti Prosafe Gigabit,Ağ,Access Point,Ubiquiti,11450.0
+U1067,Crucial T7 500gb Nvme,Depolama,Nvme Ssd,Crucial,7700.0
+U1068,Kingston Mx500 500gb Nvme,Depolama,Nvme Ssd,Kingston,5600.0
+U1069,Seagate Blue 2tb,Depolama,Harici Disk,Seagate,3200.0
+U1070,Kingston T7 1tb Nvme,Depolama,Hdd,Kingston,6200.0
+U1071,Western Digital 980 1tb,Depolama,Nvme Ssd,Western Digital,3250.0
+U1072,Crucial T7 4tb,Depolama,Ssd,Crucial,8050.0
+U1073,Western Digital Blue 4tb,Depolama,Hdd,Western Digital,2850.0
+U1074,Western Digital Barracuda 4tb,Depolama,Hdd,Western Digital,8350.0
+U1075,Sandisk 980 480gb,Depolama,Nvme Ssd,SanDisk,1750.0
+U1076,Western Digital Extreme 1tb,Depolama,Nvme Ssd,Western Digital,3250.0
+U1077,Western Digital Mx500 480gb,Depolama,Nvme Ssd,Western Digital,850.0
+U1078,Sandisk A400 1tb Nvme,Depolama,Ssd,SanDisk,6600.0
+U1079,Samsung Barracuda 1tb,Depolama,Hdd,Samsung,4400.0
+U1080,Seagate Extreme 1tb,Depolama,Ssd,Seagate,6750.0
+U1081,Seagate T7 4tb,Depolama,Hdd,Seagate,6300.0
+U1082,Seagate A400 500gb Nvme,Depolama,Ssd,Seagate,3400.0
+U1083,Seagate 980 4tb,Depolama,Nvme Ssd,Seagate,1500.0
+U1084,Sandisk Barracuda 4tb,Depolama,Hdd,SanDisk,6400.0
+U1085,Crucial Ironwolf 4tb,Depolama,Nvme Ssd,Crucial,7150.0
+U1086,Samsung Mx500 4tb,Depolama,Hdd,Samsung,6550.0
+U1087,Kingston Extreme 2tb,Depolama,Harici Disk,Kingston,2900.0
+U1088,Crucial Blue 480gb,Depolama,Hdd,Crucial,6300.0
+U1089,Nvidia Rtx 16gb Ddr4,Bileşen,Ram,NVIDIA,13200.0
+U1090,Msi Rtx 7600,Bileşen,Ekran Kartı,MSI,41850.0
+U1091,Asus Ryzen 5 14700k,Bileşen,Ram,Asus,30650.0
+U1092,Intel Core İ7 14700k,Bileşen,Ekran Kartı,Intel,12500.0
+U1093,Corsair Core İ7 5600,Bileşen,İşlemci,Corsair,15900.0
+U1094,Kingston Fury 5600,Bileşen,İşlemci,Kingston,27250.0
+U1095,Kingston Z790 5600,Bileşen,Ekran Kartı,Kingston,20750.0
+U1096,Nvidia Vengeance 32gb Ddr5,Bileşen,Ekran Kartı,NVIDIA,21250.0
+U1097,Asus Vengeance 14700k,Bileşen,Ram,Asus,23950.0
+U1098,Gigabyte Rtx 4070,Bileşen,Anakart,Gigabyte,36300.0
+U1099,Corsair Core İ7 14700k,Bileşen,Anakart,Corsair,28150.0
+U1100,Corsair Core İ5 16gb Ddr4,Bileşen,Ekran Kartı,Corsair,19600.0
+U1101,Asus Rtx 32gb Ddr5,Bileşen,İşlemci,Asus,38900.0
+U1102,Amd Prime 32gb Ddr5,Bileşen,İşlemci,AMD,27250.0
+U1103,Intel Ryzen 5 5600,Bileşen,Ekran Kartı,Intel,6250.0
+U1104,Nvidia Rtx 32gb Ddr5,Bileşen,Ram,NVIDIA,23950.0
+U1105,Amd Z790 16gb Ddr4,Bileşen,Anakart,AMD,24700.0
+U1106,Nvidia Ryzen 5 13400f,Bileşen,Ekran Kartı,NVIDIA,27100.0
+U1107,Msi Prime 7600,Bileşen,Anakart,MSI,28550.0
+U1108,Asus Prime 16gb Ddr4,Bileşen,Ekran Kartı,Asus,4800.0
+U1109,Gigabyte B550m 16gb Ddr4,Bileşen,Ekran Kartı,Gigabyte,18050.0
+U1110,Nvidia Fury 14700k,Bileşen,Anakart,NVIDIA,23600.0
+U1111,Hp Laserjet Renkli,Yazıcı,Mürekkep Püskürtmeli,HP,8950.0
+U1112,Brother Laserjet G3420,Yazıcı,Lazer Yazıcı,Brother,6350.0
+U1113,Epson Toner Renkli,Yazıcı,Sarf Malzeme,Epson,5850.0
+U1114,Canon Dcp G3420,Yazıcı,Mürekkep Püskürtmeli,Canon,10550.0
+U1115,Epson Laserjet L3250,Yazıcı,Sarf Malzeme,Epson,10300.0
+U1116,Brother Toner Hl-l2375dw,Yazıcı,Sarf Malzeme,Brother,5000.0
+U1117,Canon Workforce G3420,Yazıcı,Tarayıcı,Canon,3950.0
+U1118,Brother Workforce Hl-l2375dw,Yazıcı,Tarayıcı,Brother,11900.0
+U1119,Hp Pixma 305a Siyah,Yazıcı,Sarf Malzeme,HP,10650.0
+U1120,Brother Laserjet Renkli,Yazıcı,Mürekkep Püskürtmeli,Brother,5800.0
+U1121,Brother Ecotank L3250,Yazıcı,Tarayıcı,Brother,8300.0
+U1122,Brother Ecotank Renkli,Yazıcı,Tarayıcı,Brother,10650.0
+U1123,Epson Pixma Renkli,Yazıcı,Lazer Yazıcı,Epson,6050.0
+U1124,Brother Pixma Renkli,Yazıcı,Sarf Malzeme,Brother,11000.0
+U1125,Epson Dcp G3420,Yazıcı,Mürekkep Püskürtmeli,Epson,7100.0
+U1126,Hp Toner Hl-l2375dw,Yazıcı,Mürekkep Püskürtmeli,HP,6750.0
+U1127,Epson Dcp L3250,Yazıcı,Lazer Yazıcı,Epson,10950.0
+U1128,Hp Dcp L3250,Yazıcı,Sarf Malzeme,HP,8200.0
+U1129,Epson Pixma Hl-l2375dw,Yazıcı,Tarayıcı,Epson,2600.0
+U1130,Epson Laserjet Renkli,Yazıcı,Tarayıcı,Epson,4400.0
+U1131,Hp Toner Renkli,Yazıcı,Tarayıcı,HP,10250.0
+U1132,Epson Workforce Renkli,Yazıcı,Mürekkep Püskürtmeli,Epson,8100.0

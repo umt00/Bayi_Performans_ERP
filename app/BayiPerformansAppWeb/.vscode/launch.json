@@ -1,0 +1,28 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "BayiPerformans API (.NET 8)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "BayiPerformans: solution derle",
+      "program": "${workspaceFolder}/BayiPerformansAppWeb.Api/bin/Debug/net8.0/BayiPerformansAppWeb.Api.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/BayiPerformansAppWeb.Api",
+      "stopAtEntry": false,
+      "launchSettingsProfile": "",
+      "console": "internalConsole",
+      "justMyCode": true,
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_URLS": "https://localhost:7000;http://localhost:5000",
+        "ASPNETCORE_HTTPS_PORT": "7000"
+      },
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
+        "uriFormat": "%s/swagger"
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+**
+!requirements.txt
+!requirements.fastapi.txt
+!fast_api/
+!fast_api/**
+!app/
+!app/__init__.py
+!app/ai/
+!app/ai/**
+!config/
+!config/**

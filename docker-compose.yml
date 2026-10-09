@@ -1,0 +1,215 @@
+name: penta-bayi-performans
+
+services:
+  # ---------------------------------------------------------------------------
+  # 1. FRONTEND: React 19 + Vite Dashboard (Nginx SPA & Reverse Proxy)
+  # ---------------------------------------------------------------------------
+  ui:
+    build:
+      context: ./app/BayiPerformansAppWeb/UI
+      dockerfile: Dockerfile
+    container_name: penta-ui
+    restart: unless-stopped
+    ports:
+      - "3000:80"
+    depends_on:
+      api:
+        condition: service_started
+      fastapi:
+        condition: service_started
+    networks:
+      - penta_net
+
+  # ---------------------------------------------------------------------------
+  # 2. .NET WEB API: Bayi Performans, Kimlik Doğrulama & Satış Arama Servisi
+  # ---------------------------------------------------------------------------
+  api:
+    build:
+      context: ./app/BayiPerformansAppWeb
+      dockerfile: Dockerfile.api
+    container_name: penta-dotnet-api
+    restart: unless-stopped
+    ports:
+      - "10000:10000"
+      - "7000:10000"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=http://0.0.0.0:10000
+      - ASPNETCORE_FORWARDEDHEADERS_ENABLED=true
+      - DOTNET_HOSTBUILDER__RELOADCONFIGONCHANGE=false
+      - DOTNET_USE_POLLING_FILE_WATCHER=true
+      - Database__ConnectionString=${SUPABASE_DB_URL:-}
+      - SupabaseAuth__ProjectUrl=${SUPABASE_URL:-}
+      - SupabaseAuth__PublishableKey=${SUPABASE_ANON_KEY:-}
+      - Redis__ConnectionString=redis:6379
+      - Redis__AllowInMemoryFallback=false
+      - Elasticsearch__Enabled=${ELASTICSEARCH_ENABLED:-false}
+      - Elasticsearch__Url=http://elasticsearch:9200
+      - Elasticsearch__IndexName=satislar_index
+      - Swagger__Enabled=true
+      - Cors__AllowedOrigins__0=http://localhost:3000
+      - Cors__AllowedOrigins__1=http://localhost:5173
+    depends_on:
+      redis:
+        condition: service_healthy
+    networks:
+      - penta_net
+
+  # ---------------------------------------------------------------------------
+  # 3. FASTAPI: Teklif Motoru, Dinamik Stok & LLM Değerlendirme Servisi
+  # ---------------------------------------------------------------------------
+  fastapi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: penta-fastapi
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+      - SUPABASE_DB_URL=${SUPABASE_DB_URL:-}
+      - SUPABASE_URL=${SUPABASE_URL:-}
+      - SUPABASE_ANON_KEY=${SUPABASE_ANON_KEY:-}
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - GROQ_BASE_URL=${GROQ_BASE_URL:-https://api.groq.com/openai/v1}
+      - GROQ_MODEL=${GROQ_MODEL:-openai/gpt-oss-120b}
+      - ALLOWED_ORIGINS=http://localhost:3000,http://localhost:5173
+    networks:
+      - penta_net
+
+  # ---------------------------------------------------------------------------
+  # 4. REDIS: OTP ve Kimlik Önbellekleme (Hafif ve Hızlı)
+  # ---------------------------------------------------------------------------
+  redis:
+    image: redis:7.2-alpine
+    container_name: penta-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    networks:
+      - penta_net
+
+  # ---------------------------------------------------------------------------
+  # 5. ELASTICSEARCH: Satış ve Bayi Arama Motoru (İsteğe Bağlı / Search Profili)
+  # ---------------------------------------------------------------------------
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.12.1
+    container_name: penta-elasticsearch
+    restart: unless-stopped
+    profiles:
+      - search
+      - full
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - xpack.security.http.ssl.enabled=false
+      - ES_JAVA_OPTS=-Xms512m -Xmx512m
+    ports:
+      - "9200:9200"
+    volumes:
+      - elasticsearch_data:/usr/share/elasticsearch/data
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "curl --fail --silent http://localhost:9200/_cluster/health?wait_for_status=yellow&timeout=5s > /dev/null"
+        ]
+      interval: 10s
+      timeout: 6s
+      retries: 12
+      start_period: 30s
+    networks:
+      - penta_net
+
+  # ---------------------------------------------------------------------------
+  # 6. ELASTICSEARCH INIT: satislar_index ve Türkçe Analyzer Kurulumu
+  # ---------------------------------------------------------------------------
+  elasticsearch-init:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.12.1
+    container_name: penta-elasticsearch-init
+    restart: "no"
+    profiles:
+      - search
+      - full
+    entrypoint:
+      - /bin/sh
+      - -c
+    command:
+      - |
+        if curl --fail --silent http://elasticsearch:9200/satislar_index > /dev/null; then
+          echo "[OK] satislar_index zaten mevcut."
+        else
+          curl --fail --show-error \
+            --request PUT \
+            --header "Content-Type: application/json" \
+            --data-binary @/config/index_mapping.json \
+            http://elasticsearch:9200/satislar_index
+          echo "[OK] satislar_index basariyla olusturuldu."
+        fi
+    volumes:
+      - ./elastic_migration/index_mapping.json:/config/index_mapping.json:ro
+    depends_on:
+      elasticsearch:
+        condition: service_healthy
+    networks:
+      - penta_net
+
+  # ---------------------------------------------------------------------------
+  # 7. KIBANA: Elasticsearch Dashboard & Görselleştirme (İsteğe Bağlı)
+  # ---------------------------------------------------------------------------
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.12.1
+    container_name: penta-kibana
+    restart: unless-stopped
+    profiles:
+      - search
+      - tools
+      - full
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+    ports:
+      - "5601:5601"
+    depends_on:
+      elasticsearch:
+        condition: service_healthy
+    networks:
+      - penta_net
+
+  # ---------------------------------------------------------------------------
+  # 8. REDIS COMMANDER: Redis GUI Yönetim Arayüzü (İsteğe Bağlı)
+  # ---------------------------------------------------------------------------
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    container_name: penta-redis-commander
+    restart: unless-stopped
+    profiles:
+      - tools
+      - full
+    environment:
+      - REDIS_HOSTS=local:redis:6379
+    ports:
+      - "8081:8081"
+    depends_on:
+      redis:
+        condition: service_healthy
+    networks:
+      - penta_net
+
+volumes:
+  redis_data:
+    driver: local
+  elasticsearch_data:
+    driver: local
+
+networks:
+  penta_net:
+    driver: bridge

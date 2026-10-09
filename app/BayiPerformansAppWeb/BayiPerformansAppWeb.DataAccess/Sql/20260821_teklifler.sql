@@ -1,0 +1,10 @@
+-- KULLANMAYIN: Bu dosya 21 Ağustos tarihli eski, denormalize teklif şemasının
+-- tarihsel yer tutucusudur. `bayi_adi`, `urun_adi`, `depo_adi`,
+-- `olusturulma_tarihi_utc` ve `degerlendirme_sonucu` JSON kolonlarını bekleyen
+-- eski DDL kaldırılmıştır.
+--
+-- Kesin ve veri kaybını yöneten migration:
+-- supabase/migrations/20260825000001_refactor_schema_and_tables.sql
+--
+-- Uygulama hiçbir migration'ı başlangıçta otomatik çalıştırmaz. Canlı şema
+-- değişikliğini yalnız Data/Supabase sorumlusu inceleyip uygular.

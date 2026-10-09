@@ -1,0 +1,100 @@
+{
+  "settings": {
+    "index": {
+      "max_ngram_diff": 2
+    },
+    "number_of_shards": 1,
+    "number_of_replicas": 0,
+    "analysis": {
+      "filter": {
+        "turkish_lowercase": {
+          "type": "lowercase",
+          "language": "turkish"
+        },
+        "turkish_ascii_folding": {
+          "type": "asciifolding",
+          "preserve_original": true
+        },
+        "ngram_filter": {
+          "type": "ngram",
+          "min_gram": 3,
+          "max_gram": 5
+        }
+      },
+      "analyzer": {
+        "turkish_custom_analyzer": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "turkish_lowercase",
+            "turkish_ascii_folding"
+          ]
+        },
+        "turkish_ngram_analyzer": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "turkish_lowercase",
+            "turkish_ascii_folding",
+            "ngram_filter"
+          ]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "dynamic": false,
+    "properties": {
+      "SatisID": { "type": "keyword" },
+      "Tarih": { "type": "date" },
+      "BayiKodu": { "type": "keyword" },
+      "UrunKodu": { "type": "keyword" },
+      "DepoKodu": { "type": "keyword" },
+      "Segment": { "type": "keyword" },
+      "Bolge": { "type": "keyword" },
+      "SatisKanali": { "type": "keyword" },
+      "BayiAdi": {
+        "type": "text",
+        "analyzer": "turkish_ngram_analyzer",
+        "search_analyzer": "turkish_custom_analyzer",
+        "fields": { "keyword": { "type": "keyword", "ignore_above": 256 } }
+      },
+      "BayiSehir": {
+        "type": "text",
+        "analyzer": "turkish_ngram_analyzer",
+        "search_analyzer": "turkish_custom_analyzer",
+        "fields": { "keyword": { "type": "keyword", "ignore_above": 128 } }
+      },
+      "UrunAdi": {
+        "type": "text",
+        "analyzer": "turkish_ngram_analyzer",
+        "search_analyzer": "turkish_custom_analyzer",
+        "fields": { "keyword": { "type": "keyword", "ignore_above": 256 } }
+      },
+      "Kategori": {
+        "type": "text",
+        "analyzer": "turkish_ngram_analyzer",
+        "search_analyzer": "turkish_custom_analyzer",
+        "fields": { "keyword": { "type": "keyword", "ignore_above": 256 } }
+      },
+      "Marka": {
+        "type": "text",
+        "analyzer": "turkish_ngram_analyzer",
+        "search_analyzer": "turkish_custom_analyzer",
+        "fields": { "keyword": { "type": "keyword", "ignore_above": 256 } }
+      },
+      "DepoAdi": {
+        "type": "text",
+        "analyzer": "turkish_ngram_analyzer",
+        "search_analyzer": "turkish_custom_analyzer",
+        "fields": { "keyword": { "type": "keyword", "ignore_above": 256 } }
+      },
+      "Miktar": { "type": "double" },
+      "BirimFiyat": { "type": "double" },
+      "IskontoOrani": { "type": "double" },
+      "Ciro": { "type": "double" },
+      "BrutKar": { "type": "double" },
+      "IsIade": { "type": "boolean" }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+@host = https://localhost:7000
+@accessToken = ACCESS_TOKEN_BURAYA
+@refreshToken = REFRESH_TOKEN_BURAYA
+@otpDogrulamaToken = OTP_DOGRULAMA_CEVABINDAKI_TOKEN
+
+POST {{host}}/auth/kayit
+Content-Type: application/json
+
+{
+  "email": "ornek@example.com",
+  "sifre": "Ornek-Sifre-123!"
+}
+
+###
+
+POST {{host}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "ornek@example.com",
+  "sifre": "Ornek-Sifre-123!",
+  "dogrulama_token": "{{otpDogrulamaToken}}"
+}
+
+###
+
+POST {{host}}/auth/token-yenile
+Content-Type: application/json
+
+{
+  "refresh_token": "{{refreshToken}}"
+}
+
+###
+
+POST {{host}}/auth/onay-mailini-yeniden-gonder
+Content-Type: application/json
+
+{
+  "email": "ornek@example.com"
+}
+
+###
+
+GET {{host}}/auth/me
+Authorization: Bearer {{accessToken}}
+Accept: application/json
+
+###
+
+POST {{host}}/auth/cikis
+Authorization: Bearer {{accessToken}}
+
+###
+
+GET {{host}}/bayi/B0012/performans?donem=2025-05
+Authorization: Bearer {{accessToken}}
+Accept: application/json
+
+###
+
+GET {{host}}/bayiler/risk-listesi?donem=2025-05&segment=Kurumsal
+Authorization: Bearer {{accessToken}}
+Accept: application/json
+
+###
+
+GET {{host}}/stok/kritik?depo_kodu=DP01
+Authorization: Bearer {{accessToken}}
+Accept: application/json
+
+###
+
+POST {{host}}/teklif-degerlendir
+Authorization: Bearer {{accessToken}}
+Content-Type: application/json
+
+{
+  "bayi_kodu": "B0012",
+  "urun_kodu": "U1002",
+  "depo_kodu": "DP01",
+  "miktar": 8,
+  "birim_fiyat": 18000,
+  "iskonto_orani": 0.05
+}
+
+###
+
+GET {{host}}/api/v1/performance/dealers?donem=2026-08&karar=NEED_APPROVAL&bolge=Marmara&sayfa=1&sayfa_boyutu=50
+Authorization: Bearer {{accessToken}}
+Accept: application/json
+
+###
+
+GET {{host}}/api/v1/performance/dealers/B0001?donem=2026-08
+Authorization: Bearer {{accessToken}}
+Accept: application/json
+
+###
+
+GET {{host}}/api/v1/performance/dashboard-stats?donem=2026-08
+Authorization: Bearer {{accessToken}}
+Accept: application/json

@@ -1,0 +1,20 @@
+[
+  {
+    "bayi_kodu": "B001",
+    "ai_comment": "Bayi B001, hedef ciroyu %105 oranında aşarak 2.1 M TL ciro elde etti. Ortalama marj %18, hedefin %15'inden yüksek; iskonto %5 ve iade oranı %1 ile risk düşük, kritik stok yok. Bu performansla devam edilmesi önerilir, ancak iskonto oranının kontrolü ve iade oranının izlenmesi için düzenli raporlama yapılmalı.",
+    "alert_message_draft": "",
+    "is_fallback": false
+  },
+  {
+    "bayi_kodu": "B012",
+    "ai_comment": "B012 kodlu bayi için mevcut performans verileri incelenmiştir; hedefe ulaşım ve marj baskısı göz önünde bulundurulmalıdır.",
+    "alert_message_draft": "B012 için risk durumu incelenmelidir.",
+    "is_fallback": true
+  },
+  {
+    "bayi_kodu": "B099",
+    "ai_comment": "B099 kodlu bayi için mevcut performans verileri incelenmiştir; hedefe ulaşım ve marj baskısı göz önünde bulundurulmalıdır.",
+    "alert_message_draft": "B099 için risk durumu incelenmelidir.",
+    "is_fallback": true
+  }
+]

@@ -1,0 +1,154 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "BayiPerformans: solution derle",
+      "type": "process",
+      "command": "dotnet",
+      "args": [
+        "build",
+        "${workspaceFolder}/BayiPerformansAppWeb.sln",
+        "--configuration",
+        "Debug",
+        "--nologo"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": "$msCompile",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "silent",
+        "panel": "dedicated",
+        "clear": true
+      }
+    },
+    {
+      "label": "BayiPerformans: Redis baslat",
+      "type": "process",
+      "command": "docker",
+      "args": [
+        "compose",
+        "up",
+        "-d",
+        "redis"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      }
+    },
+    {
+      "label": "BayiPerformans: Redis durdur",
+      "type": "process",
+      "command": "docker",
+      "args": [
+        "compose",
+        "stop",
+        "redis"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "BayiPerformans: Elasticsearch ve Kibana baslat",
+      "type": "process",
+      "command": "docker",
+      "args": [
+        "compose",
+        "--profile",
+        "search",
+        "up",
+        "-d",
+        "elasticsearch",
+        "elasticsearch-init",
+        "kibana"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      }
+    },
+    {
+      "label": "BayiPerformans: Elasticsearch ve Kibana durdur",
+      "type": "process",
+      "command": "docker",
+      "args": [
+        "compose",
+        "--profile",
+        "search",
+        "stop",
+        "kibana",
+        "elasticsearch"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "BayiPerformans: Tum yerel altyapiyi baslat",
+      "dependsOrder": "parallel",
+      "dependsOn": [
+        "BayiPerformans: Redis baslat",
+        "BayiPerformans: Elasticsearch ve Kibana baslat"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "BayiPerformans: API icin hazirla",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "BayiPerformans: Redis baslat",
+        "BayiPerformans: solution derle"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "BayiPerformans: API ve arama icin hazirla",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "BayiPerformans: Tum yerel altyapiyi baslat",
+        "BayiPerformans: solution derle"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "BayiPerformans: API auth testleri",
+      "type": "process",
+      "command": "dotnet",
+      "args": [
+        "test",
+        "${workspaceFolder}/BayiPerformansAppWeb.Api.Tests/BayiPerformansAppWeb.Api.Tests.csproj",
+        "--configuration",
+        "Debug",
+        "--nologo"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": "$msCompile",
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      }
+    }
+  ]
+}

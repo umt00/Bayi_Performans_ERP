@@ -1,0 +1,30 @@
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+
+COPY BayiPerformansAppWeb.sln ./
+COPY BayiPerformansAppWeb.Api/BayiPerformansAppWeb.Api.csproj BayiPerformansAppWeb.Api/
+COPY BayiPerformansAppWeb.Business/BayiPerformansAppWeb.Business.csproj BayiPerformansAppWeb.Business/
+COPY BayiPerformansAppWeb.DataAccess/BayiPerformansAppWeb.DataAccess.csproj BayiPerformansAppWeb.DataAccess/
+COPY BayiPerformansAppWeb.Entities/BayiPerformansAppWeb.Entities.csproj BayiPerformansAppWeb.Entities/
+RUN dotnet restore BayiPerformansAppWeb.Api/BayiPerformansAppWeb.Api.csproj --disable-parallel
+
+COPY . .
+RUN dotnet publish BayiPerformansAppWeb.Api/BayiPerformansAppWeb.Api.csproj \
+    --configuration Release \
+    --output /app/publish \
+    --no-restore \
+    /p:UseAppHost=false
+
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+WORKDIR /app
+
+ENV ASPNETCORE_ENVIRONMENT=Production
+ENV ASPNETCORE_URLS=http://0.0.0.0:10000
+ENV ASPNETCORE_FORWARDEDHEADERS_ENABLED=true
+ENV DOTNET_HOSTBUILDER__RELOADCONFIGONCHANGE=false
+ENV DOTNET_USE_POLLING_FILE_WATCHER=true
+
+COPY --from=build /app/publish .
+
+EXPOSE 10000
+ENTRYPOINT ["dotnet", "BayiPerformansAppWeb.Api.dll"]

@@ -1,0 +1,58 @@
+# Sanal Ortam (Virtual Environment) 
+.venv/
+venv/
+ENV/
+
+# Çevre Değişkenleri (Şifreler & Keyler)
+.env
+.env.local
+.env.*
+!.env.example
+**/secrets.json
+**/appsettings.Local.json
+*.pem
+*.key
+*.p12
+*.pfx
+*.cer
+*.crt
+
+# Python Önbellek Dosyaları
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# İşletim Sistemi Gereksiz Dosyaları
+.DS_Store
+Thumbs.db
+
+logs/
+*.log
+
+# IDE ve Çalışma Ortamı
+/.vscode/
+.vs/
+.idea/
+.ipynb_checkpoints/
+
+# .NET derleme çıktıları
+**/[Bb]in/
+**/[Oo]bj/
+
+# Node.js ve Frontend Derleme Çıktıları
+**/node_modules/
+**/dist/
+**/dist-ssr/
+**/.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Test ve Coverage Çıktıları
+.pytest_cache/
+.coverage
+htmlcov/
+TestResults/
+

@@ -1,0 +1,112 @@
+services:
+  redis:
+    image: redis:7.2.15-alpine3.21
+    container_name: bayi-performans-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    container_name: bayi-performans-redis-commander
+    restart: unless-stopped
+    environment:
+      - REDIS_HOSTS=local:redis:6379
+    ports:
+      - "8081:8081"
+    profiles:
+      - tools
+    depends_on:
+      redis:
+        condition: service_healthy
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.12.1
+    container_name: bayi-performans-elasticsearch
+    restart: unless-stopped
+    profiles:
+      - search
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - xpack.security.http.ssl.enabled=false
+      - ES_JAVA_OPTS=-Xms512m -Xmx512m
+    ports:
+      - "9200:9200"
+    volumes:
+      - elasticsearch_data:/usr/share/elasticsearch/data
+    networks:
+      - elastic_net
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "curl --fail --silent http://localhost:9200/_cluster/health?wait_for_status=yellow&timeout=5s > /dev/null"
+        ]
+      interval: 10s
+      timeout: 6s
+      retries: 12
+      start_period: 30s
+
+  elasticsearch-init:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.12.1
+    container_name: bayi-performans-elasticsearch-init
+    restart: "no"
+    profiles:
+      - search
+    entrypoint:
+      - /bin/sh
+      - -c
+    command:
+      - |
+        if curl --fail --silent http://elasticsearch:9200/satislar_index > /dev/null; then
+          echo "satislar_index already exists"
+        else
+          curl --fail --show-error \
+            --request PUT \
+            --header "Content-Type: application/json" \
+            --data-binary @/config/index_mapping.json \
+            http://elasticsearch:9200/satislar_index
+        fi
+    volumes:
+      - ./elastic_migration/index_mapping.json:/config/index_mapping.json:ro
+    networks:
+      - elastic_net
+    depends_on:
+      elasticsearch:
+        condition: service_healthy
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.12.1
+    container_name: bayi-performans-kibana
+    restart: unless-stopped
+    profiles:
+      - search
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+    ports:
+      - "5601:5601"
+    networks:
+      - elastic_net
+    depends_on:
+      elasticsearch:
+        condition: service_healthy
+
+volumes:
+  redis_data:
+    driver: local
+  elasticsearch_data:
+    driver: local
+
+networks:
+  elastic_net:
+    name: elastic_migration_elastic_net
+    driver: bridge
